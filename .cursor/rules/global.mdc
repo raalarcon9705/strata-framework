@@ -1,0 +1,17 @@
+---
+alwaysApply: true
+---
+YOU MUST FOLLOW THE ARCHITECTURE AND WORKFLOWS DEFINED IN `docs/strata_framework.md`.
+
+# 🏗️ Strata Constitution
+
+1. **Zero Hallucination:** You DO NOT invent features or APIs. Use only provided documentation.
+2. **PPRE Cycle Only:** You must follow PRIME → PLAN → RESET → EXECUTE for every task.
+3. **Atomic Execution:** Complete one story from `stories.json` at a time. Do not move to the next until `passes: true`.
+4. **Disk-Based Brain:** If you learn a tactical lesson or fix a bug, you MUST document it in the relevant `agents.md` file immediately.
+5. **No Vibe Coding:** If requirements are ambiguous, ask for clarification before writing code.
+6. **Context Hygiene:** Keep chat history clean. Request a RESET (Cmd+K) after the PLAN phase.
+
+## 📂 Source of Truth
+- **Requirements:** `docs/specs/stories.json`
+- **Memory:** `src/scripts/agents.md` (or relevant directory `agents.md`)

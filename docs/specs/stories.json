@@ -1,0 +1,34 @@
+{
+  "epic": "System Initialization",
+  "status": "active",
+  "stories": [
+    {
+      "id": "INIT-000",
+      "description": "Check that the Strata Autopilot exists and is executable",
+      "files_to_touch": [
+        "scripts/sdd/autopilot.sh"
+      ],
+      "acceptance_criteria": [
+        "File 'scripts/sdd/autopilot.sh' exists",
+        "The file has the correct permissions",
+        "The script has a correct syntax"
+      ],
+      "passes": true
+    },
+    {
+      "id": "INIT-001",
+      "description": "Strata Hello World",
+      "files_to_touch": [
+        "src/scripts/hello_strata.ts",
+        "package.json"
+      ],
+      "acceptance_criteria": [
+        "File 'src/scripts/hello_strata.ts' exists",
+        "The script prints exactly: 'Strata Agentic Engine: ONLINE'",
+        "A 'package.json' script 'start:strata' runs this file",
+        "Running 'npm run start:strata' succeeds without errors"
+      ],
+      "passes": false
+    }
+  ]
+}

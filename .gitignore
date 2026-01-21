@@ -1,0 +1,16 @@
+# Ignore all .cursor/ except rules and commands
+.cursor/*
+!.cursor/rules/
+!.cursor/commands/
+logs/progress.txt
+# docs/done_specs/
+.env
+node_modules/
+
+# Strata Framework - Short-term memory (Optional)
+logs/progress.txt
+
+# Strata Framework - Archive (Optional: only if you don't want history of completed tasks)
+# docs/done_specs/
+
+# General
