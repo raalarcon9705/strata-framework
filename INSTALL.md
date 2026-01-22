@@ -5,17 +5,17 @@
 Install Strata Framework directly from GitHub:
 
 ```bash
-bash <(curl -s https://raw.githubusercontent.com/raalarcon9705/strata-test/main/install.sh)
+bash <(curl -s https://raw.githubusercontent.com/raalarcon9705/strata-framework/main/install.sh)
 ```
 
-**⚠️ Important**: Replace `raalarcon9705` with your GitHub username and `strata-test` with your repository name.
+**⚠️ Important**: Make sure the `install.sh` file is committed and pushed to your GitHub repository.
 
 ## Installation Options
 
 ### Install in Current Directory
 
 ```bash
-bash <(curl -s https://raw.githubusercontent.com/raalarcon9705/strata-test/main/install.sh)
+bash <(curl -s https://raw.githubusercontent.com/raalarcon9705/strata-framework/main/install.sh)
 ```
 
 ### Install in Specific Directory

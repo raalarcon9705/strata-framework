@@ -13,7 +13,7 @@
         "The file has the correct permissions",
         "The script has a correct syntax"
       ],
-      "passes": true
+      "passes": false
     },
     {
       "id": "INIT-001",

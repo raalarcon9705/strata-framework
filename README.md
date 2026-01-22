@@ -11,20 +11,20 @@
 Install Strata Framework in your project with a single command:
 
 ```bash
-bash <(curl -s https://raw.githubusercontent.com/raalarcon9705/strata-test/main/install.sh)
+bash <(curl -s https://raw.githubusercontent.com/raalarcon9705/strata-framework/main/install.sh)
 ```
 
 Or install in a specific directory:
 
 ```bash
-bash <(curl -s https://raw.githubusercontent.com/raalarcon9705/strata-test/main/install.sh) --dir ./my-project
+bash <(curl -s https://raw.githubusercontent.com/raalarcon9705/strata-framework/main/install.sh) --dir ./my-project
 ```
 
 **Alternative**: Set the repository URL as an environment variable:
 
 ```bash
-export STRATA_REPO="https://github.com/raalarcon9705/strata-test.git"
-bash <(curl -s https://raw.githubusercontent.com/raalarcon9705/strata-test/main/install.sh)
+export STRATA_REPO="https://github.com/raalarcon9705/strata-framework.git"
+bash <(curl -s https://raw.githubusercontent.com/raalarcon9705/strata-framework/main/install.sh)
 ```
 
 For more installation options, see [INSTALL.md](INSTALL.md).

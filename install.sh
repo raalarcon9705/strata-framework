@@ -15,9 +15,9 @@ NC='\033[0m' # No Color
 # Try to detect repository from git remote, or use default
 if [ -d ".git" ] && git remote get-url origin >/dev/null 2>&1; then
     DEFAULT_REPO=$(git remote get-url origin 2>/dev/null | sed 's/\.git$//' | sed 's/^git@github\.com:/https:\/\/github.com\//' || echo "")
-    STRATA_REPO="${STRATA_REPO:-${DEFAULT_REPO:-https://github.com/raalarcon9705/strata-test.git}}"
+    STRATA_REPO="${STRATA_REPO:-${DEFAULT_REPO:-https://github.com/raalarcon9705/strata-framework.git}}"
 else
-    STRATA_REPO="${STRATA_REPO:-https://github.com/raalarcon9705/strata-test.git}"
+    STRATA_REPO="${STRATA_REPO:-https://github.com/raalarcon9705/strata-framework.git}"
 fi
 STRATA_BRANCH="${STRATA_BRANCH:-main}"
 INSTALL_DIR="${INSTALL_DIR:-.}"
