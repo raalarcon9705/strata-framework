@@ -12,13 +12,8 @@ BLUE='\033[0;34m'
 NC='\033[0m' # No Color
 
 # Configuration
-# Try to detect repository from git remote, or use default
-if [ -d ".git" ] && git remote get-url origin >/dev/null 2>&1; then
-    DEFAULT_REPO=$(git remote get-url origin 2>/dev/null | sed 's/\.git$//' | sed 's/^git@github\.com:/https:\/\/github.com\//' || echo "")
-    STRATA_REPO="${STRATA_REPO:-${DEFAULT_REPO:-https://github.com/raalarcon9705/strata-framework.git}}"
-else
-    STRATA_REPO="${STRATA_REPO:-https://github.com/raalarcon9705/strata-framework.git}"
-fi
+# Default Strata Framework repository (do NOT detect from current directory)
+STRATA_REPO="${STRATA_REPO:-https://github.com/raalarcon9705/strata-framework.git}"
 STRATA_BRANCH="${STRATA_BRANCH:-main}"
 INSTALL_DIR="${INSTALL_DIR:-.}"
 
@@ -87,18 +82,8 @@ install_strata() {
     
     # Show repository information
     echo ""
-    print_info "Repository: $STRATA_REPO"
+    print_info "Strata Framework Repository: $STRATA_REPO"
     print_info "Branch: $STRATA_BRANCH"
-    if [[ "$STRATA_REPO" == *"raalarcon9705"* ]]; then
-        print_warning "Using default repository URL. Please set STRATA_REPO environment variable or use --repo flag."
-        echo ""
-        read -p "Continue with default? (y/n): " -n 1 -r
-        echo
-        if [[ ! $REPLY =~ ^[Yy]$ ]]; then
-            print_error "Installation cancelled. Set STRATA_REPO or use --repo flag."
-            exit 1
-        fi
-    fi
     echo ""
     
     # Determine installation directory
