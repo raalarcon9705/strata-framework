@@ -151,11 +151,17 @@ install_strata() {
         # Copy essential files
         print_info "Copying Strata Framework files..."
         
-        # Copy strata.sh
+        # Copy strata.sh (required file)
         if [ -f "$TEMP_DIR/strata/strata.sh" ]; then
             cp "$TEMP_DIR/strata/strata.sh" .
             chmod +x strata.sh
             print_success "Copied strata.sh"
+        else
+            print_error "strata.sh not found in repository: $STRATA_REPO"
+            print_info "Available files in repository root:"
+            ls -la "$TEMP_DIR/strata/" 2>/dev/null | head -10 || echo "  (cannot list directory)"
+            print_info "Make sure strata.sh is committed and pushed to the repository"
+            exit 1
         fi
         
         # Copy scripts directory
